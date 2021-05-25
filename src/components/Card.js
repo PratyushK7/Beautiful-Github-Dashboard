@@ -2,6 +2,7 @@ import React from "react";
 import { GithubContext } from "../context/context";
 import styled from "styled-components";
 import { MdBusiness, MdLocationOn, MdLink } from "react-icons/md";
+
 const Card = () => {
   const { githubUser } = React.useContext(GithubContext);
   const {
@@ -25,12 +26,13 @@ const Card = () => {
         </div>
         <div class="flex justify-around">
           <span class="relative inline-flex rounded-md shadow-sm">
-            <button
+            <a
+              href={html_url}
               type="button"
               class="inline-flex items-center px-4 py-2 border border-purple-400 text-base leading-6 font-medium rounded-md text-purple-900 bg-white hover:text-purple-700 focus:border-purple-300 transition ease-in-out duration-150"
             >
               Follow
-            </button>
+            </a>
             <span class="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
               <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
@@ -99,10 +101,8 @@ const Wrapper = styled.article`
       margin-bottom: 0;
     }
     a {
-      background-color: #de5d58;
-
       &:hover {
-        background: rgb(222, 93, 88, 0.8);
+        background: #744ed9;
         color: #ffffff;
       }
     }
