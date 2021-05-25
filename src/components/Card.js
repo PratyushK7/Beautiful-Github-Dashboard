@@ -28,7 +28,7 @@ const Card = () => {
       <p className="bio">{bio}</p>
       <div className="links">
         <p>
-          <MdLocationOn></MdLocationOn> {`${location}🌍` || "Earth🌍"}
+          <MdLocationOn></MdLocationOn> {location ? `${location}🌍` : "Earth🌍"}
         </p>
         {company && (
           <p>
