@@ -5,6 +5,10 @@ import { GithubContext } from "../context/context";
 const Dashboard = () => {
   const { isLoading } = React.useContext(GithubContext);
 
+  React.useEffect(() => {
+    document.title = "Dashboard";
+  }, []);
+
   if (isLoading) {
     return (
       <main>

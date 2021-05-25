@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import ErrorImage from "../images/Error.svg";
 
 const Error = () => {
+  React.useEffect(() => {
+    document.title = "Error Page";
+  }, []);
+
   return (
     <Wrapper>
       <div>

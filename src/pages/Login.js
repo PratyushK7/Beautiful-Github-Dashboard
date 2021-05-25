@@ -2,9 +2,14 @@ import React from "react";
 import { useAuth0 } from "@auth0/auth0-react";
 import styled from "styled-components";
 import loginImg from "../images/login.svg";
-import handsDown from "../images/hands-down.svg";
+
 const Login = () => {
   const { loginWithRedirect } = useAuth0();
+
+  React.useEffect(() => {
+    document.title = "Login Page";
+  }, []);
+
   return (
     <Wrapper>
       <div>
