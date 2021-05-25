@@ -13,7 +13,7 @@ PoweredBy :
 [Github-Dashboard](https://beautiful-github-dashboard.vercel.app/) 🤞👏
 
 # Introduction
-Github Dashboard utilizes various graphs and charts to display your profile neatly in form of a dashboard
+Github Dashboard utilizes various graphs and charts to display your profile neatly in form of a dashboard using Tailwind CSS and Fusion Charts
 
   - Simple and Minimal UI
 
@@ -29,7 +29,10 @@ Github Dashboard utilizes various graphs and charts to display your profile neat
 
 * [ReactJs] - HTML enhanced for web apps!
 * [node.js] - evented I/O for the backend
+* [Tailwind CSS] - A CSS framework
 
  [git-repo-url]: https://github.com/PratyushK7/Beautiful-Github-Dashboard
+ [Tailwind CSS] - https://tailwindcss.com/
  [node.js]: http://nodejs.org/
  [ReactJs]: http://reactjs.org/
+ [Github]: https://github.com/
