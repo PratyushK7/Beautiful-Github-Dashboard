@@ -18,11 +18,19 @@ const Navbar = () => {
       )}
 
       {isUser ? (
-        <button onClick={() => logout({ returnTo: window.location.origin })}>
-          logout
+        <button
+          className="inline-block px-3 py-2 rounded-lg shadow-lg text-white focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+          onClick={() => logout({ returnTo: window.location.origin })}
+        >
+          Logout
         </button>
       ) : (
-        <button onClick={loginWithRedirect}>login</button>
+        <button
+          className="inline-block rounded-lg shadow-lg text-white  hover:bg-purple-700 focus:outline-none focus:ring-2 focus:ring-purple-600 focus:ring-opacity-50"
+          onClick={loginWithRedirect}
+        >
+          Login
+        </button>
       )}
     </Wrapper>
   );
@@ -49,18 +57,9 @@ const Wrapper = styled.nav`
     object-fit: cover;
   }
   button {
-    border-radius: 5px;
-    border-color: transparent;
-    padding: 0.25rem 0.5rem;
-    text-transform: capitalize;
-    letter-spacing: var(--spacing);
-    background: var(--clr-primary-5);
-    color: var(--clr-white);
-    transition: var(--transition);
-    cursor: pointer;
+    background-color: rgb(82, 34, 208, 0.8);
     &:hover {
-      background: var(--clr-primary-8);
-      color: var(--clr-primary-1);
+      background-color: rgb(225, 29, 72);
     }
   }
 `;

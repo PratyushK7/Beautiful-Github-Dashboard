@@ -23,7 +23,20 @@ const Card = () => {
           <h4>{name}</h4>
           <p>@{twitter_username || "not_provided 🤷‍♀️"}</p>
         </div>
-        <a href={html_url}>Follow</a>
+        <div class="flex justify-around">
+          <span class="relative inline-flex rounded-md shadow-sm">
+            <button
+              type="button"
+              class="inline-flex items-center px-4 py-2 border border-purple-400 text-base leading-6 font-medium rounded-md text-purple-900 bg-white hover:text-purple-700 focus:border-purple-300 transition ease-in-out duration-150"
+            >
+              Follow
+            </button>
+            <span class="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+            </span>
+          </span>
+        </div>
       </header>
       <p className="bio">{bio}</p>
       <div className="links">
@@ -86,17 +99,11 @@ const Wrapper = styled.article`
       margin-bottom: 0;
     }
     a {
-      color: var(--clr-primary-5);
-      border: 1px solid var(--clr-primary-5);
-      padding: 0.25rem 0.75rem;
-      border-radius: 1rem;
-      text-transform: capitalize;
-      letter-spacing: var(--spacing);
-      transition: var(--transition);
-      cursor: pointer;
+      background-color: #de5d58;
+
       &:hover {
-        background: var(--clr-primary-5);
-        color: var(--clr-white);
+        background: rgb(222, 93, 88, 0.8);
+        color: #ffffff;
       }
     }
   }

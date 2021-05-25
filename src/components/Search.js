@@ -31,11 +31,26 @@ const Search = () => {
               onChange={(e) => setUser(e.target.value)}
             ></input>
             {requests > 0 && !isLoading && (
-              <button type="submit">Search</button>
+              <button className="px-3 py-1 text-white rounded-lg" type="submit">
+                Search
+              </button>
             )}
           </div>
         </form>
-        <h3>Requests: {requests}/60</h3>
+        <div class="flex justify-around">
+          <span class="relative inline-flex rounded-md shadow-sm">
+            <button
+              type="button"
+              class="inline-flex items-center px-4 py-2 border border-purple-400 text-base leading-6 font-medium rounded-md text-purple-900 bg-white hover:text-purple-700 focus:border-purple-300 transition ease-in-out duration-150"
+            >
+              Requests: {requests} / 60
+            </button>
+            <span class="flex absolute h-3 w-3 top-0 right-0 -mt-1 -mr-1">
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span class="relative inline-flex rounded-full h-3 w-3 bg-purple-500"></span>
+            </span>
+          </span>
+        </div>
       </Wrapper>
     </section>
   );
@@ -52,6 +67,7 @@ const Wrapper = styled.div`
       padding: 0 0.5rem;
     }
   }
+
   .form-control {
     background: var(--clr-white);
     display: grid;
@@ -73,18 +89,10 @@ const Wrapper = styled.div`
       letter-spacing: var(--spacing);
     }
     button {
-      border-radius: 5px;
-      border-color: transparent;
-      padding: 0.25rem 0.5rem;
-      text-transform: capitalize;
-      letter-spacing: var(--spacing);
-      background: var(--clr-primary-5);
-      color: var(--clr-white);
-      transition: var(--transition);
-      cursor: pointer;
+      background-color: rgb(82, 34, 208, 0.8);
       &:hover {
-        background: var(--clr-primary-8);
-        color: var(--clr-primary-1);
+        background: rgb(82, 34, 208, 0.9);
+        color: #ffffff;
       }
     }
 
@@ -108,6 +116,22 @@ const Wrapper = styled.div`
     margin-bottom: 0;
     color: var(--clr-grey-5);
     font-weight: 400;
+  }
+  .item {
+    border-radius: var(--radius);
+    padding: 1rem 2rem;
+    background: var(--clr-white);
+    display: grid;
+    grid-template-columns: auto 1fr;
+    column-gap: 3rem;
+    align-items: center;
+    span {
+      width: 3rem;
+      height: 3rem;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+    }
   }
 `;
 const ErrorWrapper = styled.article`
