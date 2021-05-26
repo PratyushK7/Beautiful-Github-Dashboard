@@ -32,7 +32,7 @@ Github Dashboard utilizes various graphs and charts to display your profile neat
 * [TailwindCSS] - A CSS framework
 
  [git-repo-url]: https://github.com/PratyushK7/Beautiful-Github-Dashboard
- [Tailwind CSS]: https://tailwindcss.com/
+ [TailwindCSS]: https://tailwindcss.com/
  [node.js]: http://nodejs.org/
  [ReactJs]: http://reactjs.org/
  [Github]: https://github.com/
